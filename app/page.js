@@ -73,7 +73,7 @@ export default function LandingPage() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-              >amor</motion.span>.
+              >amor.</motion.span>
             </h1>
             <p className="text-lg md:text-xl text-brand-dark-gray mb-8 md:mb-10 leading-relaxed font-light">
               A maior rede de clínicas de vacinas do Brasil. <br className="hidden md:block" />
