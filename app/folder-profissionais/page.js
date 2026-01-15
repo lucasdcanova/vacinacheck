@@ -135,19 +135,6 @@ const ComparisonTable = () => {
 export default function FolderProfissionais() {
   return (
     <div className="min-h-screen bg-gray-100 py-4 print:py-0 print:bg-white">
-      {/* Print instructions - hidden when printing */}
-      <div className="max-w-4xl mx-auto mb-4 px-4 print:hidden">
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-          <h2 className="font-semibold text-amber-800 mb-2 text-base">Instruções para impressão:</h2>
-          <ul className="text-sm text-amber-700 space-y-1.5">
-            <li>• Use <strong>Ctrl+P</strong> (Windows) ou <strong>Cmd+P</strong> (Mac) para imprimir</li>
-            <li>• Selecione a opção "Imprimir em ambos os lados" ou "Frente e verso"</li>
-            <li>• Recomendado: Papel A4 ou A5, couché 150g</li>
-            <li>• Marque a opção "Gráficos de fundo" nas configurações de impressão</li>
-          </ul>
-        </div>
-      </div>
-
       {/* FRENTE DO FOLDER */}
       <div className="w-[210mm] min-h-[297mm] mx-auto bg-gradient-to-br from-[#e8f4f8] to-[#d4eef6] shadow-lg print:shadow-none print:w-full print:min-h-0 print:page-break-after-always">
         <div className="p-5 print:p-4 min-h-[297mm] flex flex-col">
@@ -509,6 +496,19 @@ export default function FolderProfissionais() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Print instructions - hidden when printing */}
+      <div className="max-w-4xl mx-auto mt-8 px-4 print:hidden">
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+          <h2 className="font-semibold text-amber-800 mb-2 text-base">Instruções para impressão:</h2>
+          <ul className="text-sm text-amber-700 space-y-1.5">
+            <li>• Use <strong>Ctrl+P</strong> (Windows) ou <strong>Cmd+P</strong> (Mac) para imprimir</li>
+            <li>• Selecione a opção "Imprimir em ambos os lados" ou "Frente e verso"</li>
+            <li>• Recomendado: Papel A4 ou A5, couché 150g</li>
+            <li>• Marque a opção "Gráficos de fundo" nas configurações de impressão</li>
+          </ul>
         </div>
       </div>
 
