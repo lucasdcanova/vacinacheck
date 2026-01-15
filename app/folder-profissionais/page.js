@@ -136,7 +136,7 @@ export default function FolderProfissionais() {
   return (
     <div className="min-h-screen bg-gray-100 py-4 print:py-0 print:bg-white">
       {/* FRENTE DO FOLDER */}
-      <div className="w-[210mm] min-h-[297mm] mx-auto bg-gradient-to-br from-[#e8f4f8] to-[#d4eef6] shadow-lg print:shadow-none print:w-full print:min-h-0 print:page-break-after-always">
+      <div className="w-[210mm] min-h-[297mm] mx-auto bg-gradient-to-br from-[#d0e8f0] to-[#b8dce8] shadow-lg print:shadow-none print:w-full print:min-h-0 print:page-break-after-always">
         <div className="p-5 print:p-4 min-h-[297mm] flex flex-col">
           {/* Header */}
           <div className="flex items-center gap-4 mb-4 p-4 rounded-xl bg-gradient-to-r from-[#15335e] via-[#17497e] to-[#0072a2] shadow-xl relative overflow-hidden">
@@ -361,7 +361,7 @@ export default function FolderProfissionais() {
       </div>
 
       {/* VERSO DO FOLDER */}
-      <div className="w-[210mm] min-h-[297mm] mx-auto bg-gradient-to-br from-[#e8f4f8] to-[#d4eef6] shadow-lg mt-8 print:shadow-none print:w-full print:min-h-0 print:mt-0">
+      <div className="w-[210mm] min-h-[297mm] mx-auto bg-gradient-to-br from-[#d0e8f0] to-[#b8dce8] shadow-lg mt-8 print:shadow-none print:w-full print:min-h-0 print:mt-0">
         <div className="p-5 print:p-4 min-h-[297mm] flex flex-col">
           <div className="grid grid-cols-2 gap-x-6 gap-y-5 flex-1">
             {/* Coluna 1 - Gestantes, Adultos, Viajantes */}
