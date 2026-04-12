@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Syringe, Shield, Baby, User, Heart, Briefcase, Plane, ChevronRight, ArrowLeft, MessageCircle } from 'lucide-react';
 import { VACINAS, CATEGORIAS } from '@/lib/vacinas-data';
+import Footer from '@/components/Footer';
 
 const ICON_MAP = {
     Baby, User, Shield, Heart, Briefcase, Plane, Syringe,
@@ -175,33 +176,7 @@ export default function VacinasPage() {
                 </div>
             </main>
 
-            {/* Institutional Footer */}
-            <footer className="bg-brand-dark-blue" aria-label="Rodapé">
-                <div className="h-[2px] bg-brand-gradient" />
-                <div className="max-w-5xl mx-auto px-4 md:px-6 py-10 flex flex-col items-center gap-6">
-                    <img src="/logo-footer-white.png" alt="Saúde Livre Vacinas - Clínica de Vacinação Florianópolis" className="h-28 md:h-36 w-auto opacity-90" width="300" height="144" />
-                    <nav className="flex flex-col sm:flex-row items-center gap-4 text-sm text-white/70" aria-label="Links do rodapé">
-                        <a href="/vacinas" className="hover:text-brand-cyan transition-colors">Vacinas e Serviços</a>
-                        <span className="hidden sm:inline text-white/20" aria-hidden="true">|</span>
-                        <a href="/equipe" className="hover:text-brand-cyan transition-colors">Nossa Equipe</a>
-                        <span className="hidden sm:inline text-white/20" aria-hidden="true">|</span>
-                        <a
-                            href="https://wa.me/5548991895758?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-brand-cyan transition-colors"
-                        >
-                            Contato
-                        </a>
-                    </nav>
-                    <address className="text-white/50 text-xs text-center not-italic leading-relaxed">
-                        Alameda Gov. Heriberto Hulse, 123 — Centro, Florianópolis/SC — CEP 88015-620<br />
-                        (48) 99189-5758 — contato@saudelivrefloripa.com.br
-                    </address>
-                    <div className="w-16 h-[1px] bg-brand-cyan/30" aria-hidden="true" />
-                    <p className="text-white/40 text-xs">© 2026 Saúde Livre Vacinas. Florianópolis Centro.</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }
