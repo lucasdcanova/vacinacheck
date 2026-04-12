@@ -8,23 +8,24 @@ export default function EquipePage() {
     return (
         <div className="min-h-screen min-h-screen-ios bg-slate-50 font-sans text-brand-dark-gray selection:bg-brand-cyan/20 pb-safe">
             {/* Header */}
-            <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-slate-100 pt-safe">
+            <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 pt-safe" aria-label="Navegação">
                 <div className="max-w-5xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
-                    <a href="/" className="flex items-center gap-2 group">
-                        <ArrowLeft className="w-5 h-5 text-brand-medium-gray group-hover:text-brand-blue transition-colors" />
+                    <a href="/" className="flex items-center gap-2 group" aria-label="Voltar à página inicial">
+                        <ArrowLeft className="w-5 h-5 text-brand-medium-gray group-hover:text-brand-blue transition-colors" aria-hidden="true" />
                         <span className="text-sm font-medium text-brand-medium-gray group-hover:text-brand-blue transition-colors">Voltar ao início</span>
                     </a>
                     <div className="flex items-center gap-2">
-                        <img src="/logo-header.png" alt="Saúde Livre" className="h-6 md:h-8 w-auto" />
+                        <img src="/simbolo.png" alt="Símbolo Saúde Livre Vacinas" className="h-8 md:h-10 w-auto" width="40" height="40" />
                     </div>
                 </div>
+                <div className="h-[2px] bg-brand-gradient" />
             </nav>
 
             <main className="pt-32 pb-20 px-4 md:px-6">
                 <div className="max-w-4xl mx-auto">
                     {/* Hero Section */}
                     <div className="text-center mb-16">
-                        <span className="inline-block py-2 px-4 rounded-full bg-brand-light text-brand-medium-blue text-sm font-bold tracking-wide mb-4 uppercase">
+                        <span className="inline-block py-2 px-4 rounded-full bg-brand-soft-blue text-brand-medium-blue text-sm font-bold tracking-wide mb-4 uppercase border border-brand-cyan/20">
                             Quem cuida de você
                         </span>
                         <h1 className="text-4xl md:text-5xl font-bold text-brand-dark-blue mb-6">
@@ -46,7 +47,7 @@ export default function EquipePage() {
                             {/* Photo Section */}
                             <div className="md:col-span-5 bg-brand-light/30 relative min-h-[400px] md:min-h-full flex items-center justify-center p-8">
                                 <div className="w-64 h-64 rounded-full bg-brand-blue/10 border-4 border-white shadow-lg flex items-center justify-center relative overflow-hidden group">
-                                    <img src="/equipe/sophia.jpg" alt="Sophia Francy" className="w-full h-full object-cover" />
+                                    <img src="/equipe/sophia.jpg" alt="Enfermeira Sophia Francy - Responsável Técnica da Saúde Livre Vacinas Florianópolis" className="w-full h-full object-cover" width="256" height="256" />
                                 </div>
 
                                 {/* Decorative elements */}
@@ -141,10 +142,32 @@ export default function EquipePage() {
                 </div>
             </main>
 
-            {/* Footer */}
-            <footer className="py-8 text-center text-brand-medium-gray text-sm bg-white border-t border-slate-100 flex flex-col items-center gap-4">
-                <img src="/logo-header.png" alt="Saúde Livre" className="h-6 w-auto opacity-50 grayscale hover:grayscale-0 transition-all" />
-                <p>© 2025 Saúde Livre Vacinas. Florianópolis Centro.</p>
+            {/* Institutional Footer */}
+            <footer className="bg-brand-dark-blue" aria-label="Rodapé">
+                <div className="h-[2px] bg-brand-gradient" />
+                <div className="max-w-5xl mx-auto px-4 md:px-6 py-10 flex flex-col items-center gap-6">
+                    <img src="/logo-footer-white.png" alt="Saúde Livre Vacinas - Clínica de Vacinação Florianópolis" className="h-28 md:h-36 w-auto opacity-90" width="300" height="144" />
+                    <nav className="flex flex-col sm:flex-row items-center gap-4 text-sm text-white/70" aria-label="Links do rodapé">
+                        <a href="/vacinas" className="hover:text-brand-cyan transition-colors">Vacinas e Serviços</a>
+                        <span className="hidden sm:inline text-white/20" aria-hidden="true">|</span>
+                        <a href="/equipe" className="hover:text-brand-cyan transition-colors">Nossa Equipe</a>
+                        <span className="hidden sm:inline text-white/20" aria-hidden="true">|</span>
+                        <a
+                            href="https://wa.me/5548991895758?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-brand-cyan transition-colors"
+                        >
+                            Contato
+                        </a>
+                    </nav>
+                    <address className="text-white/50 text-xs text-center not-italic leading-relaxed">
+                        Alameda Gov. Heriberto Hulse, 123 — Centro, Florianópolis/SC — CEP 88015-620<br />
+                        (48) 99189-5758 — contato@saudelivrefloripa.com.br
+                    </address>
+                    <div className="w-16 h-[1px] bg-brand-cyan/30" aria-hidden="true" />
+                    <p className="text-white/40 text-xs">© 2026 Saúde Livre Vacinas. Florianópolis Centro.</p>
+                </div>
             </footer>
         </div>
     );

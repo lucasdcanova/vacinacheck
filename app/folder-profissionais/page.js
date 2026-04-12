@@ -112,7 +112,7 @@ const ComparisonTable = () => {
         </thead>
         <tbody>
           {items.map((item, i) => (
-            <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-[#f0f9ff]'}>
+            <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-[#f0f4f8]'}>
               <td className="px-3 py-2 text-gray-700 font-medium">{item.vaccine}</td>
               <td className="text-center px-2 py-2">
                 <div className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center mx-auto">

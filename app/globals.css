@@ -6,14 +6,16 @@
    CSS Variables & Custom Properties
    ============================================================================= */
 :root {
-  /* Brand Colors */
+  /* Brand Colors - Design System Oficial */
   --color-brand-dark-blue: #15335e;
   --color-brand-medium-blue: #17497e;
   --color-brand-blue: #0072a2;
+  --color-brand-deep-blue: #0b4780;
   --color-brand-cyan: #6de0e4;
   --color-brand-dark-gray: #464753;
   --color-brand-medium-gray: #8f9498;
-  --color-brand-light: #f0f9ff;
+  --color-brand-light: #f0f4f8;
+  --color-brand-soft-blue: #e8f4f8;
 
   /* iOS Safe Areas */
   --safe-area-inset-top: env(safe-area-inset-top, 0px);

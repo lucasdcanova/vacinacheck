@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /folder-profissionais
+Disallow: /Informacoes*
+Disallow: /Relatorio*
+Disallow: /manual_marca*
+Disallow: /calendario_vacinal*
+Disallow: /vacinacao_gestantes*
 
 Sitemap: https://saudelivrefloripa.com.br/sitemap.xml

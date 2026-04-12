@@ -22,12 +22,12 @@ export const viewport = {
 }
 
 export const metadata = {
-  title: 'Saúde Livre - Vacinas Florianópolis Centro',
-  description: 'A maior rede de clínicas de vacinas do Brasil. Cuidado humanizado e proteção para todas as idades. Verifique sua carteirinha de vacinação.',
-  keywords: 'vacinas, vacinação, florianópolis, carteirinha de vacinação, saúde livre, vacina infantil, vacina adulto, imunização',
+  title: 'Saúde Livre Vacinas - Clínica de Vacinação em Florianópolis Centro',
+  description: 'Clínica de vacinação em Florianópolis Centro. Vacinas para bebês, crianças, gestantes, adultos e idosos. Atendimento humanizado e agendamento fácil pelo WhatsApp. Saúde Livre Vacinas.',
+  keywords: 'clínica de vacinação florianópolis, vacinas florianópolis centro, vacinação infantil florianópolis, vacina dengue florianópolis, vacina gripe florianópolis, saúde livre vacinas, carteirinha de vacinação, vacina bebê florianópolis, vacina gestante florianópolis, imunização florianópolis',
   authors: [{ name: 'Saúde Livre Vacinas' }],
   generator: 'Next.js',
-  applicationName: 'VacinaCheck',
+  applicationName: 'Saúde Livre Vacinas',
   referrer: 'origin-when-cross-origin',
   creator: 'Saúde Livre Florianópolis',
   publisher: 'Saúde Livre Vacinas',
@@ -38,6 +38,11 @@ export const metadata = {
   },
   metadataBase: new URL('https://saudelivrefloripa.com.br'),
 
+  // Canonical
+  alternates: {
+    canonical: 'https://saudelivrefloripa.com.br',
+  },
+
   // PWA Manifest
   manifest: '/manifest.json',
 
@@ -45,7 +50,7 @@ export const metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'VacinaCheck',
+    title: 'Saúde Livre Vacinas',
     startupImage: [
       {
         url: '/splash/splash-2048x2732.png',
@@ -103,28 +108,19 @@ export const metadata = {
 
   // Open Graph
   openGraph: {
-    title: 'Saúde Livre VacinaCheck - Verifique sua Carteirinha',
-    description: 'A maior rede de clínicas de vacinas do Brasil. Verifique sua carteirinha de vacinação com inteligência artificial.',
+    title: 'Saúde Livre Vacinas - Clínica de Vacinação em Florianópolis Centro',
+    description: 'Clínica de vacinação em Florianópolis Centro. Vacinas para todas as idades com atendimento humanizado. Agende pelo WhatsApp.',
     url: 'https://saudelivrefloripa.com.br',
     siteName: 'Saúde Livre Vacinas',
     locale: 'pt_BR',
     type: 'website',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Saúde Livre VacinaCheck',
-      },
-    ],
   },
 
   // Twitter
   twitter: {
     card: 'summary_large_image',
-    title: 'Saúde Livre VacinaCheck',
-    description: 'Verifique sua carteirinha de vacinação com inteligência artificial.',
-    images: ['/og-image.png'],
+    title: 'Saúde Livre Vacinas - Clínica de Vacinação em Florianópolis',
+    description: 'Clínica de vacinação em Florianópolis Centro. Vacinas para todas as idades com atendimento humanizado.',
   },
 
   // Robots
@@ -141,15 +137,133 @@ export const metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['MedicalClinic', 'LocalBusiness'],
+  '@id': 'https://saudelivrefloripa.com.br/#clinica',
+  name: 'Saúde Livre Vacinas - Florianópolis Centro',
+  alternateName: 'Saúde Livre Clínica de Vacinação',
+  description: 'Clínica de vacinação em Florianópolis Centro com calendário vacinal completo. Vacinas para bebês, crianças, gestantes, adultos e idosos. Atendimento humanizado.',
+  url: 'https://saudelivrefloripa.com.br',
+  telephone: '+5548991895758',
+  email: 'contato@saudelivrefloripa.com.br',
+  image: 'https://saudelivrefloripa.com.br/hero-logo.png',
+  logo: 'https://saudelivrefloripa.com.br/hero-logo.png',
+  priceRange: '$$',
+  currenciesAccepted: 'BRL',
+  paymentAccepted: 'Dinheiro, Cartão de Crédito, Cartão de Débito, PIX',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Alameda Governador Heriberto Hulse, 123',
+    addressLocality: 'Florianópolis',
+    addressRegion: 'SC',
+    postalCode: '88015-620',
+    addressCountry: 'BR',
+    areaServed: {
+      '@type': 'City',
+      name: 'Florianópolis',
+    },
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -27.5954,
+    longitude: -48.5480,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '08:00',
+    closes: '18:00',
+  },
+  medicalSpecialty: 'http://schema.org/Immunology',
+  availableService: [
+    { '@type': 'MedicalProcedure', name: 'Vacinação Infantil' },
+    { '@type': 'MedicalProcedure', name: 'Vacinação para Adultos' },
+    { '@type': 'MedicalProcedure', name: 'Vacinação para Gestantes' },
+    { '@type': 'MedicalProcedure', name: 'Vacinação Ocupacional' },
+    { '@type': 'MedicalProcedure', name: 'Vacinação para Viajantes' },
+    { '@type': 'MedicalProcedure', name: 'Teste do Pezinho' },
+    { '@type': 'MedicalProcedure', name: 'Soroterapia' },
+  ],
+  sameAs: [
+    'https://www.instagram.com/saudelivre.com.br',
+    'https://www.facebook.com/saudelivre.com.br',
+  ],
+  hasMap: 'https://www.google.com/maps/search/?api=1&query=Alameda+Gov.+Heriberto+Hulse,+123,+Centro,+Florianópolis',
+}
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Quais vacinas estão disponíveis na Saúde Livre Florianópolis?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oferecemos o calendário vacinal completo da rede privada: vacinas para bebês, crianças, adolescentes, adultos, gestantes e idosos. Inclui vacinas contra dengue, gripe, HPV, meningite, febre amarela, herpes zóster e muito mais.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'É necessário agendar a vacinação?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'O agendamento não é obrigatório, mas recomendamos para garantir atendimento imediato. Agende facilmente pelo WhatsApp: (48) 99189-5758.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual o horário de funcionamento da clínica?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Funcionamos de segunda a sexta-feira, das 08h às 18h. Estamos localizados na Alameda Gov. Heriberto Hulse, 123 - Centro, Florianópolis/SC.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'A clínica atende crianças e bebês?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim! Temos ambiente acolhedor e lúdico para crianças, equipe especializada em vacinação pediátrica e técnicas de alívio da dor. Atendemos desde recém-nascidos.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quais formas de pagamento são aceitas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Aceitamos dinheiro, cartões de crédito e débito, e PIX.',
+      },
+    },
+  ],
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={cabin.variable} suppressHydrationWarning>
       <head>
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+
         {/* Additional iOS optimizations */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="VacinaCheck" />
+        <meta name="apple-mobile-web-app-title" content="Saúde Livre Vacinas" />
         <meta name="mobile-web-app-capable" content="yes" />
+
+        {/* Geo meta tags for local SEO */}
+        <meta name="geo.region" content="BR-SC" />
+        <meta name="geo.placename" content="Florianópolis" />
+        <meta name="geo.position" content="-27.5954;-48.5480" />
+        <meta name="ICBM" content="-27.5954, -48.5480" />
 
         {/* Disable auto-detection */}
         <meta name="format-detection" content="telephone=no" />
@@ -164,22 +278,22 @@ export default function RootLayout({ children }) {
 
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//wa.me" />
-
-        {/* Google Tag Manager */}
-        <script dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MQQ7M24R');`}} />
-        {/* End Google Tag Manager */}
       </head>
       <body className="font-sans antialiased" suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQQ7M24R"
 height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
-        {/* End Google Tag Manager (noscript) */}
 
         {children}
+
+        {/* Google Tag Manager - loaded after interactive */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQQ7M24R');`}
+        </Script>
 
         {/* Service Worker Registration */}
         <Script id="sw-register" strategy="afterInteractive">
