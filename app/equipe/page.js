@@ -48,7 +48,7 @@ export default function EquipePage() {
                             {/* Photo Section */}
                             <div className="md:col-span-5 bg-brand-light/30 relative min-h-[400px] md:min-h-full flex items-center justify-center p-8">
                                 <div className="w-64 h-64 rounded-full bg-brand-blue/10 border-4 border-white shadow-lg flex items-center justify-center relative overflow-hidden group">
-                                    <span className="text-6xl font-bold text-brand-blue" aria-label="Enfermeira Thais Alves - Responsável Técnica da Saúde Livre Vacinas Florianópolis">TA</span>
+                                    <img src="/equipe/thais.jpg" alt="Enfermeira Thais Alves - Responsável Técnica da Saúde Livre Vacinas Florianópolis" className="w-full h-full object-cover" width="256" height="256" />
                                 </div>
 
                                 {/* Decorative elements */}
