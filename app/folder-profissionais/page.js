@@ -461,7 +461,7 @@ export default function FolderProfissionais() {
                     <div className="p-0.5 bg-[#6de0e4]/30 rounded">
                       <Check className="w-2.5 h-2.5 text-[#6de0e4]" />
                     </div>
-                    <span>Equipe especializada liderada pela Enf. Sophia</span>
+                    <span>Equipe especializada liderada pela Enf. Thais</span>
                   </li>
                   <li className="flex items-start gap-2 bg-white/10 rounded-lg p-1.5 backdrop-blur-sm">
                     <div className="p-0.5 bg-[#6de0e4]/30 rounded">

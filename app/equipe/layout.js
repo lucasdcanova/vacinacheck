@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Nossa Equipe - Saúde Livre Vacinas Florianópolis Centro',
-  description: 'Conheça a equipe técnica da Saúde Livre Florianópolis Centro. Enfermeira Sophia Francy lidera nosso time com foco em atendimento humanizado e segurança na vacinação.',
+  description: 'Conheça a equipe técnica da Saúde Livre Florianópolis Centro. Enfermeira Thais Alves lidera nosso time com foco em atendimento humanizado e segurança na vacinação.',
   alternates: {
     canonical: 'https://saudelivrefloripa.com.br/equipe',
   },
@@ -14,10 +14,10 @@ export const metadata = {
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Sophia Francy da Silva Mendes',
+  name: 'Thais Aparecida Campos Rodrigues Alves',
   jobTitle: 'Enfermeira Responsável Técnica',
-  description: 'Enfermeira graduada responsável técnica da Saúde Livre Vacinas Florianópolis Centro. Especialista em atendimento humanizado e vacinação segura.',
-  image: 'https://saudelivrefloripa.com.br/equipe/sophia.jpg',
+  description: 'Enfermeira graduada responsável técnica da Saúde Livre Vacinas Florianópolis Centro. Experiência em vacinação, SCIH, Núcleo de Segurança do Paciente e atendimento humanizado.',
+  image: 'https://saudelivrefloripa.com.br/equipe/thais.jpg',
   worksFor: {
     '@type': 'MedicalClinic',
     name: 'Saúde Livre Vacinas - Florianópolis Centro',
@@ -27,16 +27,18 @@ const personSchema = {
     {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'degree',
-      name: 'Graduação em Enfermagem - Centro Universitário Estácio',
+      name: 'Bacharelado em Enfermagem - Centro Universitário Estácio (UNIMETA)',
     },
   ],
   knowsAbout: [
     'Vacinação Infantil',
     'Vacinação para Adultos',
+    'Sala de Vacina e Imunobiológicos (PNI)',
     'Atendimento Humanizado',
-    'Vigilância Epidemiológica',
-    'Gerontologia',
-    'Enfermagem do Trabalho',
+    'Segurança do Paciente',
+    'SCIH - Serviço de Controle de Infecção Hospitalar',
+    'Cuidados Clínicos e Home Care',
+    'Classificação de Risco',
   ],
 }
 

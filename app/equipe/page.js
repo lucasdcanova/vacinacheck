@@ -48,7 +48,7 @@ export default function EquipePage() {
                             {/* Photo Section */}
                             <div className="md:col-span-5 bg-brand-light/30 relative min-h-[400px] md:min-h-full flex items-center justify-center p-8">
                                 <div className="w-64 h-64 rounded-full bg-brand-blue/10 border-4 border-white shadow-lg flex items-center justify-center relative overflow-hidden group">
-                                    <img src="/equipe/sophia.jpg" alt="Enfermeira Sophia Francy - Responsável Técnica da Saúde Livre Vacinas Florianópolis" className="w-full h-full object-cover" width="256" height="256" />
+                                    <span className="text-6xl font-bold text-brand-blue" aria-label="Enfermeira Thais Alves - Responsável Técnica da Saúde Livre Vacinas Florianópolis">TA</span>
                                 </div>
 
                                 {/* Decorative elements */}
@@ -59,21 +59,21 @@ export default function EquipePage() {
                             {/* Content Section */}
                             <div className="md:col-span-7 p-8 md:p-12 flex flex-col justify-center">
                                 <div className="mb-6">
-                                    <h2 className="text-3xl font-bold text-brand-dark-blue mb-2">Sophia Francy da Silva Mendes</h2>
+                                    <h2 className="text-3xl font-bold text-brand-dark-blue mb-2">Thais Aparecida Campos Rodrigues Alves</h2>
                                     <p className="text-brand-blue font-medium text-lg flex items-center gap-2">
                                         <Award className="w-5 h-5" />
                                         Enfermeira Responsável Técnica
                                     </p>
-                                    <p className="text-brand-medium-gray text-sm mt-1">Enfermeira Graduada</p>
+                                    <p className="text-brand-medium-gray text-sm mt-1">Enfermeira Graduada · COREN ativo</p>
                                 </div>
 
                                 <div className="space-y-6 text-brand-dark-gray leading-relaxed">
                                     <p>
-                                        Com uma trajetória marcada pela dedicação ao próximo, Sophia lidera nossa equipe com um olhar voltado para o <strong>atendimento humanizado</strong> e a segurança do paciente. Sua formação sólida e experiência diversificada garantem um cuidado de excelência.
+                                        Enfermeira com experiência sólida na assistência direta ao paciente em ambientes <strong>hospitalares, ambulatoriais e domiciliares</strong>. Sua atuação reúne cuidados clínicos, pré e pós-operatórios, classificação de risco, administração segura de medicamentos, vacinação e curativos simples e complexos.
                                     </p>
 
                                     <p>
-                                        Sua experiência inclui atuação na <strong>Rede de Atenção Básica à Saúde</strong> e como <strong>Enfermeira Responsável Técnica</strong> em instituição de longa permanência para idosos, demonstrando versatilidade e comprometimento com diferentes públicos e necessidades.
+                                        Com vivência em ambientes de alta demanda e postura ética, organizada e acolhedora, Thais traz experiência prévia em rotinas de <strong>Sala de Vacina</strong>, <strong>SCIH</strong> e <strong>Núcleo de Segurança do Paciente</strong>, priorizando o atendimento humanizado e a segurança em cada procedimento.
                                     </p>
 
                                     <div className="bg-brand-light/50 rounded-xl p-6 border border-brand-blue/10 mt-6">
@@ -84,19 +84,19 @@ export default function EquipePage() {
                                         <ul className="space-y-3">
                                             <li className="flex items-start gap-3">
                                                 <GraduationCap className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
-                                                <span className="text-sm">Graduação em Enfermagem – Centro Universitário Estácio</span>
+                                                <span className="text-sm">Bacharelado em Enfermagem – Centro Universitário Estácio (UNIMETA)</span>
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <Shield className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
-                                                <span className="text-sm">Especializações em andamento: Gerontologia, Enfermagem do Trabalho, Atenção Primária e Saúde da Mulher</span>
+                                                <span className="text-sm">Experiência em Sala de Vacina e administração de imunobiológicos conforme PNI</span>
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <Heart className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
-                                                <span className="text-sm">Capacitação em Primeiros Socorros e Gestão do Cuidado na Atenção Domiciliar</span>
+                                                <span className="text-sm">Atuação em SCIH e Núcleo de Segurança do Paciente, com foco em protocolos e POPs</span>
                                             </li>
                                             <li className="flex items-start gap-3">
                                                 <Stethoscope className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
-                                                <span className="text-sm">Experiência em Vigilância Epidemiológica e Saúde Pública</span>
+                                                <span className="text-sm">Cuidados clínicos pré e pós-operatórios, Home Care e classificação de risco</span>
                                             </li>
                                         </ul>
                                     </div>

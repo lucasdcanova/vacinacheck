@@ -172,7 +172,7 @@ export default function LandingPage() {
                   Nossos Diferenciais
                 </h2>
                 <p className="text-brand-dark-gray text-sm leading-relaxed mb-4">
-                  Equipe liderada pela Enf. Sophia, focada em atendimento humanizado e técnicas de alívio da dor.
+                  Equipe liderada pela Enf. Thais, focada em atendimento humanizado e técnicas de alívio da dor.
                 </p>
                 <p className="text-brand-dark-gray text-sm leading-relaxed">
                   Ambiente acolhedor e lúdico para crianças.
