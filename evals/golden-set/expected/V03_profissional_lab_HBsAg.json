@@ -1,0 +1,17 @@
+{
+  "done_vaccines": [
+    "Hep B 6 doses totais",
+    "Não-respondedor sorológico documentado"
+  ],
+  "missing_for_age": [
+    "Profissional não-respondedor: profilaxia pós-exposição com HBIG em caso de incidente percutâneo. Sem benefício em nova série."
+  ],
+  "due_next": [
+    "Sem nova série indicada (não-respondedor após 2 esquemas)"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "nao_respondedor_hepb",
+    "orientar_pos_exposicao_HBIG"
+  ]
+}

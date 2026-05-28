@@ -1,0 +1,5 @@
+{
+  "case_id": "C01_lactente_6m_em_dia",
+  "scenario": "Lactente 6 meses em dia com PNI 2025",
+  "vaccine_card_text": "PACIENTE: Maria S. 6m | BCG: 2025-11-15 | Hep B nasc: 2025-11-15 | Penta 2m: 2026-01-20 | Penta 4m: 2026-03-20 | VIP 2m: 2026-01-20 | VIP 4m: 2026-03-20 | Pneumo10 2m: 2026-01-20 | Pneumo10 4m: 2026-03-20 | VORH 2m: 2026-01-20 | VORH 4m: 2026-03-20 | Meningo C 3m: 2026-02-20 | Meningo C 5m: 2026-04-20"
+}

@@ -1,0 +1,18 @@
+{
+  "done_vaccines": [
+    "calendario_ate_15m_completo",
+    "Hep A SUS dose única"
+  ],
+  "missing_for_age": [
+    "Hepatite A 2ª dose (SBIm rede privada)",
+    "Varicela (D2 considerada SBIm)"
+  ],
+  "due_next": [
+    "Hep A 2ª dose (SBIm)",
+    "Varicela D2 (SBIm)"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "sus_completo_sbim_recomenda_complemento"
+  ]
+}

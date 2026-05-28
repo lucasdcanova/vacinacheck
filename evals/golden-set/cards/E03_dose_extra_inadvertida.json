@@ -1,0 +1,5 @@
+{
+  "case_id": "E03_dose_extra_inadvertida",
+  "scenario": "Penta 4 doses (paciente recebeu 1 extra por erro)",
+  "vaccine_card_text": "PACIENTE: Tiago F. 7m | Hep B nasc 2025-10-22. Penta 2m: 2025-12-15. Penta 4m: 2026-02-12. Penta extra: 2026-03-22 (erro registrado). Penta 6m: 2026-04-22. VIP 2m, 4m, 6m ok. Pneumo10 ok. VORH 2m, 4m ok."
+}

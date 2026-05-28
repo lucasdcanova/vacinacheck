@@ -1,0 +1,21 @@
+{
+  "done_vaccines": [
+    "Hep B nasc",
+    "Penta x4 (1 dose extra inadvertida — sem dano clínico)",
+    "VIP 3 doses",
+    "Pneumo10 3 doses",
+    "VORH 2 doses"
+  ],
+  "missing_for_age": [],
+  "due_next": [
+    "Não repetir Penta — esquema completo",
+    "Pneumo10 reforço 12m",
+    "Tríplice viral 12m",
+    "FA 9m"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "dose_extra_sem_repercussao",
+    "registrar_em_obs"
+  ]
+}

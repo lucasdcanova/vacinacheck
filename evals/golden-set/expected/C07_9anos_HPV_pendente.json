@@ -1,0 +1,18 @@
+{
+  "done_vaccines": [
+    "calendario_infancia_completo"
+  ],
+  "missing_for_age": [
+    "HPV (PNI 2025: dose única 9-14 anos)",
+    "Meningo ACWY 11a (a partir de 11a)",
+    "dTpa adolescente (a partir de 10a)"
+  ],
+  "due_next": [
+    "HPV dose única",
+    "Meningo ACWY (a partir de 11a)"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "pni_2025_hpv_dose_unica"
+  ]
+}

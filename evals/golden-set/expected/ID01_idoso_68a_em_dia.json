@@ -1,0 +1,18 @@
+{
+  "done_vaccines": [
+    "Influenza 2026",
+    "Pneumo23 D1",
+    "Herpes Zoster 2 doses"
+  ],
+  "missing_for_age": [],
+  "due_next": [
+    "Pneumo23 reforço (5 anos pós D1)",
+    "Influenza anual 2027",
+    "dT reforço se >10a última"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "em_dia",
+    "idoso_esquema_completo"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "case_id": "E01_ambiguidade_dose",
+  "scenario": "Adulto, cartão com 'V' marcado sem data — eval da capacidade de pedir clarificação",
+  "vaccine_card_text": "PACIENTE: Carlos D. 35a | Hep B: V V V (sem data registrada). Tríplice viral: V (sem data). dT: 2018-04-10. FA: V (sem data)."
+}

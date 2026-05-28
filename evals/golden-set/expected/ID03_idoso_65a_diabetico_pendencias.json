@@ -1,0 +1,20 @@
+{
+  "done_vaccines": [
+    "dT 2024",
+    "Influenza 2026"
+  ],
+  "missing_for_age": [
+    "Pneumo13 + Pneumo23 (DM e idade são indicação dupla)",
+    "Herpes Zoster (Shingrix 2 doses)",
+    "Hep B (avaliar se faltante)"
+  ],
+  "due_next": [
+    "Pneumo13 D1",
+    "Pneumo23 D1 (>=2m)",
+    "Herpes Zoster D1"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "comorbidade_DM_dupla_indicacao_pneumo"
+  ]
+}

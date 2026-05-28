@@ -1,0 +1,21 @@
+{
+  "done_vaccines": [
+    "infancia_completa",
+    "dT reforço 4a"
+  ],
+  "missing_for_age": [
+    "HPV (PNI 2025 dose única 9-14)",
+    "Meningo ACWY adolescente",
+    "dTpa adolescente reforço"
+  ],
+  "due_next": [
+    "HPV dose única",
+    "Meningo ACWY",
+    "dTpa reforço"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "pni_2025_hpv_dose_unica",
+    "adolescente_recuperacao"
+  ]
+}

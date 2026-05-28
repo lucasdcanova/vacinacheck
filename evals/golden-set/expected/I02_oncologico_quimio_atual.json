@@ -1,0 +1,28 @@
+{
+  "done_vaccines": [
+    "Hep B 3 doses",
+    "dT 2024"
+  ],
+  "missing_for_age": [
+    "Pneumo13 + Pneumo23 (CRIE indicação)",
+    "Influenza inativada anual",
+    "Hep A (avaliar)"
+  ],
+  "due_next": [
+    "Aguardar janela ≥ 21d sem quimio para vacinas inativadas (Pneumo, Influenza)"
+  ],
+  "contraindicated_now": [
+    "Tríplice viral",
+    "Febre amarela",
+    "Varicela",
+    "BCG",
+    "VOP",
+    "VORH",
+    "Herpes Zoster vivo (Zostavax) - usar Shingrix (recombinante, segura)"
+  ],
+  "flags": [
+    "quimio_ativa",
+    "vacinas_vivas_contraindicadas",
+    "preferir_shingrix"
+  ]
+}

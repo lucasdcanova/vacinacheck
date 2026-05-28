@@ -1,0 +1,18 @@
+{
+  "done_vaccines": [
+    "Influenza 2026 gestante",
+    "dTpa gestacional",
+    "Hep B 3 doses"
+  ],
+  "missing_for_age": [],
+  "due_next": [
+    "Sem pendências obstétricas. Pós-parto: rever Tríplice viral, varicela, HPV se elegível."
+  ],
+  "contraindicated_now": [
+    "Vacinas vivas atenuadas (Tríplice viral, FA, Varicela, BCG)"
+  ],
+  "flags": [
+    "gestante_em_dia",
+    "lembrete_pos_parto"
+  ]
+}

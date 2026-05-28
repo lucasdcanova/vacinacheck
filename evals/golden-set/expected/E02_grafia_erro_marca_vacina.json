@@ -1,0 +1,22 @@
+{
+  "done_vaccines": [
+    "Hep B nasc",
+    "Penta 3 doses",
+    "VIP 3 doses",
+    "Pneumo10 3 doses (interpretado de 'Pneumo10VPN')",
+    "VORH 2 doses",
+    "Meningo C 2 doses"
+  ],
+  "missing_for_age": [],
+  "due_next": [
+    "Pneumo10 reforço 12m",
+    "Meningo C reforço 12m",
+    "Tríplice viral 12m",
+    "Febre amarela 9m",
+    "Hep A 15m"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "grafia_normalizada_pneumo10"
+  ]
+}

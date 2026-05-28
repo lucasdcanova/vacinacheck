@@ -1,0 +1,22 @@
+{
+  "done_vaccines": [
+    "Influenza gestante",
+    "dTpa gestacional",
+    "Hep B",
+    "Tríplice viral D1 (1998)"
+  ],
+  "missing_for_age": [
+    "Tríplice viral D2",
+    "HPV (avaliar SBIm 26-45 esquema 3 doses)",
+    "Varicela 2 doses (se não imune)"
+  ],
+  "due_next": [
+    "Tríplice viral D2",
+    "HPV D1",
+    "Avaliar varicela"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "pos_parto_amamentando_pode_vacina_viva"
+  ]
+}

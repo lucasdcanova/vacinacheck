@@ -1,0 +1,5 @@
+{
+  "case_id": "E02_grafia_erro_marca_vacina",
+  "scenario": "Cartão com grafia errada de marca: 'Pneumo10VPN' vs 'Pneumo13'",
+  "vaccine_card_text": "PACIENTE: Lúcia E. 8m | Hep B nasc ok. Penta 2m, 4m, 6m ok. VIP 2m, 4m, 6m ok. 'Pneumo10VPN' 2m, 4m, 6m. VORH 2m, 4m. Meningo C 3m, 5m."
+}

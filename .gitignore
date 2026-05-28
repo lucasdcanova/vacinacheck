@@ -69,3 +69,6 @@ android/build/
 .vscode/
 *.swp
 Thumbs.db
+
+# eval run artifacts
+evals/reports/

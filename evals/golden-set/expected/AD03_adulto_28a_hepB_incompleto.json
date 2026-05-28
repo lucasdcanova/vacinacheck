@@ -1,0 +1,19 @@
+{
+  "done_vaccines": [
+    "Hep B 1 dose",
+    "Tríplice viral 2 doses",
+    "dT 2018"
+  ],
+  "missing_for_age": [
+    "Hep B D2 (1m após D1)",
+    "Hep B D3 (6m após D1)"
+  ],
+  "due_next": [
+    "Hep B D2 — atrasada, retomar esquema",
+    "Hep B D3 — após D2"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "esquema_incompleto_retomar"
+  ]
+}

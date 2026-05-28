@@ -1,0 +1,5 @@
+{
+  "case_id": "I02_oncologico_quimio_atual",
+  "scenario": "Paciente oncológico em quimio ativa — vacinas vivas contraindicadas",
+  "vaccine_card_text": "PACIENTE: Sonia M. 55a | Câncer mama em quimioterapia (paclitaxel) atual. Última quimio: há 5d. Histórico vacinal: Hep B 3 doses 2010. dT 2024-01-08. Sem Pneumo."
+}

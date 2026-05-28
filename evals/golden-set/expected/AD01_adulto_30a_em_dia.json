@@ -1,0 +1,18 @@
+{
+  "done_vaccines": [
+    "Hep B 3 doses",
+    "Tríplice viral 2 doses",
+    "dT 2018",
+    "Febre amarela dose única"
+  ],
+  "missing_for_age": [],
+  "due_next": [
+    "dT/dTpa reforço (10 anos da última dose = 2028)",
+    "Influenza anual"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "em_dia",
+    "lembrete_influenza_anual"
+  ]
+}

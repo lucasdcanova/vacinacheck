@@ -1,0 +1,17 @@
+{
+  "done_vaccines": [
+    "esquema_basico_completo_ate_15m"
+  ],
+  "missing_for_age": [
+    "DTP 2º reforço (4a)",
+    "VOP 2º reforço (4a)"
+  ],
+  "due_next": [
+    "DTP 2º reforço",
+    "VOP 2º reforço"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "pode_aplicar_simultaneo"
+  ]
+}

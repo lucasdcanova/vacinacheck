@@ -1,0 +1,24 @@
+{
+  "done_vaccines": [
+    "Hep B 3 doses + anti-HBs imune",
+    "Tríplice viral",
+    "dT 2019",
+    "Influenza 2026"
+  ],
+  "missing_for_age": [
+    "dTpa adulto (CRIE profissional saúde)",
+    "Varicela 2 doses se não imune (sorologia)",
+    "Meningo ACWY (avaliar exposição)",
+    "Hep A (CRIE)"
+  ],
+  "due_next": [
+    "dTpa",
+    "Hep A esquema",
+    "Solicitar sorologia varicela se sem história"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "profissional_saude_crie",
+    "anti_hbs_imune_documentado"
+  ]
+}

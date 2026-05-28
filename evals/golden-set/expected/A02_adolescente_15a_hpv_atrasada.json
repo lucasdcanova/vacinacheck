@@ -1,0 +1,21 @@
+{
+  "done_vaccines": [
+    "infancia_completa",
+    "dT 4a"
+  ],
+  "missing_for_age": [
+    "HPV (fora da janela SUS 9-14a — manter recomendação SBIm 15-26a esquema 2 doses)",
+    "Meningo ACWY",
+    "dTpa reforço"
+  ],
+  "due_next": [
+    "HPV 2 doses (SBIm 15-26a)",
+    "Meningo ACWY",
+    "dTpa"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "fora_janela_pni_hpv",
+    "esquema_sbim_15_26a_aplica"
+  ]
+}

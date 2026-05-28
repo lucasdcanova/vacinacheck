@@ -1,0 +1,25 @@
+{
+  "done_vaccines": [
+    "BCG",
+    "Hep B 3 doses",
+    "Pentavalente 3 doses",
+    "VIP 3 doses",
+    "Pneumo10 2 doses + reforço",
+    "VORH 2 doses",
+    "Meningo C 2 doses + reforço"
+  ],
+  "missing_for_age": [
+    "Tríplice viral D1",
+    "Febre Amarela",
+    "Hepatite A"
+  ],
+  "due_next": [
+    "Tríplice viral D1",
+    "Febre Amarela",
+    "Hepatite A"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "aplicar_simultaneo_12m"
+  ]
+}

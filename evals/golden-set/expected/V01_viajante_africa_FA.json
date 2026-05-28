@@ -1,0 +1,24 @@
+{
+  "done_vaccines": [
+    "dT",
+    "Hep B",
+    "Tríplice viral"
+  ],
+  "missing_for_age": [
+    "Febre amarela (exigência sanitária Angola — Certificado CIVP requer >=10d antes embarque)",
+    "Hep A (sanitária)",
+    "Tifoide (avaliar destino)",
+    "Raiva pré-exposição (avaliar rural)",
+    "Meningo ACWY (cinturão africano)"
+  ],
+  "due_next": [
+    "Febre amarela dose única — agendar HOJE para CIVP",
+    "Hep A D1 + D2 6m",
+    "Meningo ACWY"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "viajante_FA_obrigatoria",
+    "civp_10d_minimo"
+  ]
+}

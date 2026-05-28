@@ -1,0 +1,28 @@
+{
+  "done_vaccines": [
+    "BCG",
+    "Hep B",
+    "Pentavalente 2m",
+    "VIP 2m",
+    "Pneumo10 2m",
+    "VORH 2m",
+    "Meningo C 3m"
+  ],
+  "missing_for_age": [
+    "Pentavalente 4m",
+    "VIP 4m",
+    "Pneumo10 4m",
+    "VORH 4m"
+  ],
+  "due_next": [
+    "Pentavalente 4m",
+    "VIP 4m",
+    "Pneumo10 4m",
+    "VORH 4m (atenção: idade limite até 7m29d para VORH)"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "atrasado",
+    "atenção_vorh_janela"
+  ]
+}

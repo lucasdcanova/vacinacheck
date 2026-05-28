@@ -1,0 +1,20 @@
+{
+  "done_vaccines": [
+    "Influenza 2026",
+    "Pneumo13",
+    "Pneumo23",
+    "Herpes Zoster D1",
+    "dT 2022"
+  ],
+  "missing_for_age": [
+    "Herpes Zoster D2 (intervalo 2-6m após D1, atrasada)"
+  ],
+  "due_next": [
+    "Herpes Zoster D2 imediata",
+    "Influenza 2027"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "hz_d2_atrasada"
+  ]
+}

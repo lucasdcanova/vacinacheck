@@ -1,0 +1,25 @@
+{
+  "done_vaccines": [
+    "Influenza 2026",
+    "Hep B 3 doses",
+    "dT 2020",
+    "Tríplice viral 2 doses"
+  ],
+  "missing_for_age": [
+    "dTpa gestacional (a partir 20s — agendar)"
+  ],
+  "due_next": [
+    "dTpa quando >= 20s"
+  ],
+  "contraindicated_now": [
+    "Tríplice viral",
+    "Febre amarela",
+    "HPV",
+    "Varicela",
+    "BCG"
+  ],
+  "flags": [
+    "gestante",
+    "aguardar_20s_para_dtpa"
+  ]
+}

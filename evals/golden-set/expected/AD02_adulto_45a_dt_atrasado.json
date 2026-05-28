@@ -1,0 +1,20 @@
+{
+  "done_vaccines": [
+    "Hep B 3 doses (2002)",
+    "dT 2010"
+  ],
+  "missing_for_age": [
+    "dT/dTpa reforço (>10 anos)",
+    "Tríplice viral (verificar status)",
+    "Influenza anual",
+    "Febre amarela (se reside ou viaja área de recomendação)"
+  ],
+  "due_next": [
+    "dT/dTpa reforço imediato",
+    "Influenza anual"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "dT_atrasado_>10a"
+  ]
+}

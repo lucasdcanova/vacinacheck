@@ -1,0 +1,26 @@
+{
+  "done_vaccines": [
+    "Hep B 3 doses (CRIE)",
+    "Pneumo13",
+    "Pneumo23",
+    "dT 2023"
+  ],
+  "missing_for_age": [
+    "Influenza anual",
+    "Meningo ACWY (CRIE: imunocomprometidos)",
+    "HPV (CRIE: 9-45a imunossuprimidos)",
+    "Hep A 2 doses (CRIE)",
+    "Tríplice viral (se CD4>200)"
+  ],
+  "due_next": [
+    "Influenza 2026",
+    "Meningo ACWY",
+    "HPV esquema 3 doses",
+    "Hep A D1+D2"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "hiv_estavel_cd4_acima_200",
+    "esquema_crie_imunocomprometidos"
+  ]
+}

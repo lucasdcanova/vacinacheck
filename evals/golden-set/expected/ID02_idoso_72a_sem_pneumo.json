@@ -1,0 +1,22 @@
+{
+  "done_vaccines": [
+    "dT 2022",
+    "Influenza 2025",
+    "Hep B 3 doses"
+  ],
+  "missing_for_age": [
+    "Pneumo13 + Pneumo23 (esquema sequencial >60a)",
+    "Herpes Zoster (Shingrix 2 doses)",
+    "Influenza 2026"
+  ],
+  "due_next": [
+    "Pneumo13 D1",
+    "Pneumo23 D1 (>=2m após Pneumo13)",
+    "Herpes Zoster D1",
+    "Influenza 2026"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "idoso_recuperacao_pneumo_hz"
+  ]
+}

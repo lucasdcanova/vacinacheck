@@ -1,0 +1,18 @@
+{
+  "done_vaccines": [
+    "dT 2018"
+  ],
+  "missing_for_age": [
+    "Confirmar Hep B 3 doses com sorologia anti-HBs",
+    "Confirmar Tríplice viral 2 doses",
+    "Confirmar Febre amarela"
+  ],
+  "due_next": [
+    "Solicitar carteira oficial ou sorologia para 3 itens ambíguos antes de revacinar"
+  ],
+  "contraindicated_now": [],
+  "flags": [
+    "registros_ambiguos",
+    "solicitar_clarificacao_antes_revacinar"
+  ]
+}
