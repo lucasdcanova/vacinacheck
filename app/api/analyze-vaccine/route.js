@@ -2,8 +2,12 @@ import OpenAI from 'openai';
 import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs';
+import crypto from 'crypto';
 import { toFile } from 'openai/uploads';
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { getCached, setCached } from '../../../lib/idempotency.mjs';
+import { withRetry } from '../../../lib/retry.mjs';
+import { enqueueDLQ } from '../../../lib/dlq.mjs';
 
 export const runtime = 'nodejs';
 export const maxBodySize = '100mb';
@@ -31,7 +35,21 @@ const formatErrorDetail = (error) => {
 
 export const maxDuration = 300; // permitir uploads/processamentos maiores em edge/node
 
+// SHA-256 of (file bytes + patientInfo + model chain) — used as the
+// idempotency key when the caller does not send one. Same input ->
+// same key -> cached response, no duplicate model spend.
+async function deriveIdempotencyKey(fileBuffer, patientInfoRaw) {
+    const h = crypto.createHash('sha256');
+    h.update(fileBuffer);
+    if (patientInfoRaw) h.update(String(patientInfoRaw));
+    h.update(JSON.stringify(MODEL_CHAIN));
+    return `analyze-vaccine:${h.digest('hex')}`;
+}
+
 export async function POST(req) {
+    // idempotencyKey is declared in the outer scope so that the catch
+    // block can include it in the DLQ payload for later replay.
+    let idempotencyKey = null;
     try {
         const formData = await req.formData();
         const file = formData.get('file');
@@ -40,6 +58,28 @@ export async function POST(req) {
         if (!(file instanceof File)) {
             return NextResponse.json({ error: 'Arquivo não fornecido' }, { status: 400 });
         }
+
+        // 1) Idempotency check. Caller may send their own key via the
+        //    `Idempotency-Key` header (e.g. mobile retrying a flaky
+        //    network), in which case we trust it; otherwise we derive
+        //    a deterministic key from the input bytes so duplicate
+        //    uploads of the same card return the cached response and
+        //    do not spend model budget twice.
+        const fileBuffer = Buffer.from(await file.arrayBuffer());
+        const callerKey = req.headers.get('idempotency-key');
+        idempotencyKey = callerKey || (await deriveIdempotencyKey(fileBuffer, patientInfoRaw));
+
+        const cached = await getCached(idempotencyKey);
+        if (cached) {
+            return NextResponse.json(
+                { ...cached, _cache: 'hit' },
+                { headers: { 'Idempotency-Key': idempotencyKey } }
+            );
+        }
+
+        // Re-expose the file-as-File interface that the downstream code
+        // (Gemini upload, openai.toFile) already expects.
+        const reReadFile = async () => fileBuffer;
 
         let patientInfo = {};
         try {
@@ -206,11 +246,21 @@ Se o documento não for uma carteirinha de vacinação ou estiver ilegível, ret
 
         let response;
         let usedModel = null;
+        let attemptsUsed = 0;
 
         const errors = [];
         for (const model of MODEL_CHAIN) {
             try {
-                response = await generateReport(model);
+                // Each model attempt now has its own exponential-backoff retry
+                // loop with full jitter, so a transient 429 / 503 / ECONNRESET
+                // from OpenAI does not eat a slot on the chain.
+                response = await withRetry(
+                    async (attempt) => {
+                        attemptsUsed = attempt;
+                        return generateReport(model);
+                    },
+                    { maxAttempts: 3, baseMs: 800, maxMs: 8000, label: `openai:${model}` }
+                );
                 usedModel = model;
                 break;
             } catch (error) {
@@ -221,10 +271,22 @@ Se o documento não for uma carteirinha de vacinação ou estiver ilegível, ret
         }
 
         if (!response) {
+            // Terminal failure on the OpenAI step — push to DLQ so it
+            // can be replayed once the upstream recovers, instead of
+            // being lost on the floor.
+            await enqueueDLQ({
+                idempotencyKey,
+                fileName,
+                stage: 'openai-reconcile',
+                modelChainTried: MODEL_CHAIN,
+                primaryError: errors.map((e) => `${e.model}:${e.details}`).join(' | '),
+                attempts: attemptsUsed,
+            });
             return NextResponse.json({
                 error: `Não foi possível usar os modelos disponíveis (${MODEL_CHAIN.join(', ')}) para analisar a carteirinha.`,
-                detalhes: errors
-            }, { status: 502 });
+                detalhes: errors,
+                idempotencyKey
+            }, { status: 502, headers: { 'Idempotency-Key': idempotencyKey } });
         }
 
         // Extrair texto da resposta do Responses API
@@ -238,6 +300,11 @@ Se o documento não for uma carteirinha de vacinação ou estiver ilegível, ret
 
         try {
             const jsonResponse = JSON.parse(content);
+            // Cheap shape sanity-check before we cache. Better to refuse
+            // to cache a malformed payload than to cache it once and
+            // hand it back forever.
+            const EXPECTED_FIELDS = ['done_vaccines', 'missing_for_age', 'due_next', 'contraindicated_now', 'flags'];
+            const hasAtLeastOneExpectedField = EXPECTED_FIELDS.some((f) => Array.isArray(jsonResponse[f]));
             jsonResponse.modeloUtilizado = usedModel;
             jsonResponse.cadeiaModelosTentados = MODEL_CHAIN;
             jsonResponse.arquivoEnviado = {
@@ -246,18 +313,48 @@ Se o documento não for uma carteirinha de vacinação ou estiver ilegível, ret
                 pdf: isPdf,
                 fileId: uploadedFile ? uploadedFile.id : 'gemini-extracted'
             };
-            return NextResponse.json(jsonResponse);
+            jsonResponse.idempotencyKey = idempotencyKey;
+            // Only cache successful, structurally plausible payloads —
+            // never cache a garbled output that we will later have to
+            // serve repeatedly.
+            if (hasAtLeastOneExpectedField) {
+                await setCached(idempotencyKey, jsonResponse);
+            }
+            return NextResponse.json(
+                { ...jsonResponse, _cache: 'miss' },
+                { headers: { 'Idempotency-Key': idempotencyKey } }
+            );
         } catch (e) {
             console.error("Erro ao fazer parse do JSON do OpenAI:", e, content);
-            return NextResponse.json({ error: 'Erro ao processar resposta da IA', raw: content }, { status: 500 });
+            await enqueueDLQ({
+                idempotencyKey,
+                fileName,
+                stage: 'parse',
+                modelChainTried: MODEL_CHAIN,
+                primaryError: e?.message || 'parse error',
+            });
+            return NextResponse.json(
+                { error: 'Erro ao processar resposta da IA', raw: content, idempotencyKey },
+                { status: 500, headers: { 'Idempotency-Key': idempotencyKey } }
+            );
         }
 
     } catch (error) {
         console.error("Erro na API de análise:", error);
+        // Last-resort safety net: any uncaught error inside the route
+        // gets a DLQ entry so a future operator can see what the input
+        // looked like.
+        await enqueueDLQ({
+            idempotencyKey,
+            stage: 'unknown',
+            modelChainTried: MODEL_CHAIN,
+            primaryError: error?.message || 'unknown error',
+        }).catch(() => {});
         return NextResponse.json({
             error: 'Erro interno do servidor',
             details: error?.message || 'Erro desconhecido',
-            stack: error?.stack || null
-        }, { status: 500 });
+            stack: error?.stack || null,
+            idempotencyKey
+        }, { status: 500, headers: idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {} });
     }
 }
